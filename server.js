@@ -106,6 +106,13 @@ router.route("/reportes/:id_reporte").get(function (req, res) {
                 res.send(err);
             }
             reporte.nombre = req.body.nombre;
+            reporte.apellido = req.body.apellido;
+            reporte.correo = req.body.correo;
+            reporte.direccion = req.body.direccion;
+            reporte.referencia = req.body.referencia;
+            reporte.profesion = req.body.profesion;
+            reporte.comentario = req.body.comentario;
+
             reporte.save(function(err) {
                 if(err) {
                     res.send(err)
