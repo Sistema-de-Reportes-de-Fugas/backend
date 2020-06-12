@@ -9,9 +9,6 @@ Jorge de la Vega A01650285
 
 Este proyecto tiene como propósito hacer una aplicación para reportar fugas de agua en la Ciudad de México. Esta parte es el backend hecho con Node.js. Para el frontend visitar [aqui](https://github.com/Sistema-de-Reportes-de-Fugas/frontend).
 
-## ng lint
-Para utilizar lint, asegurese que cuente con lint instalado.
-Deberá correr el comando: ng lint
 
 ## Correr el proyecto
 Para poder hacer uso del proyecto, deberá contar con npm en su computadora. Siga los siguientes pasos:
