@@ -88,7 +88,8 @@ router.route("/reportes").post(checkJwt,async function(req,res) {
         reporte.referencia = req.body.referencia;
         reporte.tipoPersona = req.body.tipoPersona;
         reporte.comentario = req.body.comentario;
-        reporte.numeroReporte = counter; 
+        reporte.numeroReporte = counter;
+        reporte.idioma = req.body.idioma;
         reporte.comentarioAdmin = req.body.comentarioAdmin;
         /*
         if (reporte.nombre == "") {
@@ -142,6 +143,7 @@ router.route("/reportes/:id_reporte").get(checkJwt,function (req, res) {
             reporte.profesion = req.body.profesion;
             reporte.comentario = req.body.comentario;
             reporte.comentarioAdmin = req.body.comentarioAdmin;
+            reporte.idioma = req.body.idioma;
 
             reporte.save(function(err) {
                 if(err) {

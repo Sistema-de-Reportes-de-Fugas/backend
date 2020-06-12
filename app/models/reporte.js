@@ -13,8 +13,8 @@ var ReporteSchema = new Schema({
     comentario: String,
     numeroReporte: Number,
     comentarioAdmin: String,
-    notificado: String
-    
+    notificado: String,
+    idioma: String,
 });
 
 module.exports = mongoose.model("Reporte", ReporteSchema);
