@@ -20,7 +20,7 @@ Para poder hacer uso del proyecto, deberá contar con npm en su computadora. Sig
 ```git clone https://github.com/Sistema-de-Reportes-de-Fugas/backend```
 
 2. 
-```cd frontend```
+```cd backend```
   
 3. 
 ```npm install```
