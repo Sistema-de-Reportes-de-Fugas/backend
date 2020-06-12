@@ -75,12 +75,6 @@ router.get("/api",function(req, res){
     });
 });
 
-// Define an endpoint that must be called with an access token
-router.get("/api/external", checkJwt, (req, res) => {
-    res.send({
-      msg: "Your Access Token was successfully validated!"
-    });
-  });
 
 //declarar modelos
 var Reporte = require("./app/models/reporte");
@@ -170,6 +164,10 @@ router.route("/reportes/:id_reporte").get(function (req, res) {
             res.json({ mensaje:"Usuario eliminado" });
         })
     })
+
+
+
+
 
 app.use("/api",router); //url base de este api que tiene las rutas en el router
 
