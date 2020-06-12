@@ -14,8 +14,7 @@ var ReporteSchema = new Schema({
     numeroReporte: Number,
     comentarioAdmin: String,
     notificado: String,
-    idioma: String
-    
+    idioma: String,
 });
 
 module.exports = mongoose.model("Reporte", ReporteSchema);
