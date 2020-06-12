@@ -24,7 +24,7 @@ Para poder hacer uso del proyecto, deberá contar con npm en su computadora. Sig
 ```npm install```
   
 4. 
-```npm start```
+```node server.js```
  
  
 
