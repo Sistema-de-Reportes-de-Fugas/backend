@@ -163,7 +163,7 @@ router.route("/reportes/:id_reporte").get(function (req, res) {
         })
     })
 
-//ADMINISTRATOR
+
 
 
 
