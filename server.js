@@ -96,6 +96,7 @@ router.route("/reportes").post(async function(req,res) {
         reporte.comentario = req.body.comentario;
         reporte.numeroReporte = counter; 
         reporte.comentarioAdmin = req.body.comentarioAdmin;
+        reporte.idioma = req.body.idioma;
         /*
         if (reporte.nombre == "") {
             res.status(400).send({
@@ -148,6 +149,7 @@ router.route("/reportes/:id_reporte").get(function (req, res) {
             reporte.profesion = req.body.profesion;
             reporte.comentario = req.body.comentario;
             reporte.comentarioAdmin = req.body.comentarioAdmin;
+            reporte.idioma = req.body.idioma;
 
             reporte.save(function(err) {
                 if(err) {
