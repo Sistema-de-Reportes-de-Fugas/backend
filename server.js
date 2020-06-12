@@ -78,7 +78,7 @@ router.get("/api",function(req, res){
 
 //declarar modelos
 var Reporte = require("./app/models/reporte");
-router.route("/reportes").post(async function(req,res) {
+router.route("/reportes").post(checkJwt,async function(req,res) {
         counter = counter + 1;
         var reporte = new Reporte();
         reporte.nombre = req.body.nombre;
@@ -108,7 +108,7 @@ router.route("/reportes").post(async function(req,res) {
         } catch(error) {
             res.status(500).send({ error: error});
         }
-    }).get(function(req, res) {
+    }).get(checkJwt, function(req, res) {
         Reporte.find(function(err, reportes){
             if(err) {
                 res.send(err);
@@ -116,7 +116,7 @@ router.route("/reportes").post(async function(req,res) {
             res.status(200).send(reportes);
         });
     });
-router.route("/reportes/:id_reporte").get(function (req, res) {
+router.route("/reportes/:id_reporte").get(checkJwt,function (req, res) {
     Reporte.findById(req.params.id_reporte, function (error, reporte) {
       if (error) {
         res.status(404).send({ message: "Not found" });
@@ -129,7 +129,7 @@ router.route("/reportes/:id_reporte").get(function (req, res) {
       res.status(200).send(reporte);
     });
   })
-    .put(function(req, res) {
+    .put(checkJwt, function(req, res) {
         Reporte.findById(req.params.id_reporte, function(err, reporte) {
             if(err) {
                 res.send(err);
@@ -151,7 +151,7 @@ router.route("/reportes/:id_reporte").get(function (req, res) {
             }) 
         })
     })
-    .delete(function(req, res) {
+    .delete(checkJwt, function(req, res) {
         Reporte.remove({
             _id: req.params.id_reporte,
 
